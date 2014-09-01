@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Generate CSS from LESS template while allowing custom variable inputs</title>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/less.js"></script>
+	<script src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+<div class="container">
+  <h1>In Browser LESS -> CSS</h1>
+  <div class="header">
+    <div>
+    <label for="color1">Color 1 (in LESS file as '@color1')</label>&nbsp;
+    <input id="color1" type="text" placeholder="#F0F0F0"></input>
+    <br />
+    <label for="color2">Color 2 (in LESS file as '@color2')</label>&nbsp;
+    <input id="color2" type="text" placeholder="#FFFFFF"></input>
+    <br />
+    <input id="generate" type="button" value="Generate"></input>
+  </div>
+</div>
+    <br />
+<b style='float:left'>~~~LESS Template~~~</b>
+<textarea id="source">
+// Styles
+body {
+  background: @color2;
+}
+
+textarea {
+  color:@color1;
+}
+</textarea>
+<br />
+<b style='float:left'>~~~CSS Output~~~</b>
+  
+<textarea id="output" placeholder="Nothing yet."></textarea>
+</div>
+</body>
+</html>
