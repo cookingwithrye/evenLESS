@@ -1,14 +1,15 @@
-/* Default required values, if defined they are replaced later */
+//default colors. If defined later these values will be overwritten with the form values
 @color1: #ffffff;
 @color2: #000000;
 @color3: #f0f0f0;
 
-@url1: 'http://www.google.ca/'; /* base site url */
+//define a base url. Might be useful for css files that depend on urls depending on different servers
+@url1: 'http://www.google.ca/';
 
 @misc1: 'Add custom text into css';
 @misc2: 'nada';
 
-/* calculate full url to logo */
+//calculate full url to logo
 @customUrl: %("%sImages/logo.png", @url1);
 
 // Styles
