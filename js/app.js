@@ -1,10 +1,16 @@
 var rawLess = null;
 
-var getDeclaration(variableName, value) {
-	if (!!value) {
-		return variableName + ':' + value + ';\n';
+function getDeclaration(variableName, value, wrapInQuotes) {
+	if (value !== '' && value !== null && typeof value != 'undefined') {
+		if (!wrapInQuotes) {
+			return variableName + ':' + value + ';\n';
+		} else {
+			return variableName + ': "' + value + '";\n';
+		}
+	} else {
+		return '';
 	}
-};
+}
 
 $(function() {
 	$.ajax({
@@ -12,6 +18,7 @@ $(function() {
 		async: false,
 		success : function (lessFile) {
 			rawLess = lessFile;
+			rawLess = rawLess + '\n\n/*Generated variables:*/';
 		}
 	}); 
 });
@@ -25,14 +32,14 @@ $(function() {
 		  init: function() {
 			if (rawLess !== null && typeof rawLess != 'undefined') {
 				
-				rawLess = getDeclaration('@misc2', $('#misc2').val()) + rawLess;
-				rawLess = getDeclaration('@misc1', $('#misc1').val()) + rawLess;
-				rawLess = getDeclaration('@url2', $('#url2').val()) + rawLess;
-				rawLess = getDeclaration('@url1', $('#url1').val()) + rawLess;
-				rawLess = getDeclaration('@color2', $('#color2').val()) + rawLess;
-				rawLess = getDeclaration('@color1', $('#color1').val()) + rawLess;
-				rawLess = "//Generated Variables" + '\n' + rawLess;
-
+				//TODO: auto-generate the input fields based on the contents of the LESS template itself
+				rawLess = rawLess + getDeclaration('@color1', $('#color1').val());
+				rawLess = rawLess + getDeclaration('@color2', $('#color2').val());
+				rawLess = rawLess + getDeclaration('@color3', $('#color3').val());
+				rawLess = rawLess + getDeclaration('@url1', $('#url1').val(), true);
+				rawLess = rawLess + getDeclaration('@url2', $('#url2').val(), true);
+				rawLess = rawLess + getDeclaration('@misc1', $('#misc1').val());
+				rawLess = rawLess + getDeclaration('@misc2', $('#misc2').val());
 				CssCompile.compile(rawLess);
 			}
 		  },
@@ -40,6 +47,7 @@ $(function() {
 			parser.parse(raw, function(err, css){
 			  if (err) {
 				lessOutput = err;
+				CssCompile.$style.text(lessOutput);
 				// Do some error handling...or not
 			  }
 			  if (css) {
