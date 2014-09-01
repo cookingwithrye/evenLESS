@@ -1,3 +1,14 @@
+/* Default required values, if defined they are replaced later */
+@color1: #ffffff;
+@color2: #000000;
+@color3: #f0f0f0;
+
+@url1: 'http://www.google.ca';
+@url2: %("%s/images/logo.png", @url1); 
+
+@misc1: 'Add custom text into css';
+@misc2: 'nada';
+
 // Styles
 body {
   background: @color1;
@@ -5,4 +16,9 @@ body {
 
 textarea {
   color:@color2;
+  background-image: url('@{url2}');
+}
+
+#header:after {
+	content: '@{misc1}';
 }
