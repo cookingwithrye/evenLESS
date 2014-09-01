@@ -16,32 +16,25 @@
 	<br />
 	<label for="color1">Color 1</label>&nbsp;
     <input id="color1" type="text" placeholder="#F0F0F0"></input>
-	<span class="less_variable">@color1</span>
-    <br />
+	<br />
     <label for="color2">Color 2</label>&nbsp;
     <input id="color2" type="text" placeholder="#FFFFFF"></input>
-	<span class="less_variable">@color2</span>
     <br />
     <label for="color3">Color 3</label>&nbsp;
     <input id="color3" type="text" placeholder="red"></input>
-	<span class="less_variable">@color3</span>
     <br />
     <label for="url1">Url 1</label>&nbsp;
-    <input id="url1" type="text" placeholder="http://www.test.com/"></input>
-	<span class="less_variable">@url1</span>
+    <input id="url1" type="text" placeholder="http://www.google.com/"></input>
     <br />
     <label for="url2">Url 2</label>&nbsp;
-    <input id="url2" type="text" placeholder="http://www.anothertest.com/"></input>
-	<span class="less_variable">@url2</span>
+    <input id="url2" type="text" placeholder="http://www.google.com/"></input>
     <br />
     <label for="misc1">Misc. 1</label>&nbsp;
-    <input id="misc1" type="text" placeholder="Anything other variable"></input>
-	<span class="less_variable">@misc1</span>
+    <input id="misc1" type="text" placeholder="Any other text value"></input>
     <br />
     <label for="misc2">Misc. 2</label>&nbsp;
-    <input id="misc2" type="text" placeholder="Anything other variable"></input>
-	<span class="less_variable">@misc2</span>
-    <br />
+    <input id="misc2" type="text" placeholder="Any other text value"></input>
+	<br />
 	<label><input id="shouldMinify" type="checkbox" checked />Minify CSS?</label>
     <input id="generate" type="button" value="Generate"></input>
   </div>
@@ -50,8 +43,28 @@
 <b style='float:left'>CSS Output</b>
   
 <textarea id="output" placeholder="Nothing yet."></textarea>
+
 <br />
 <a href="/less_template.less" target="_new">See LESS template file</a>
+
+<br /><br />
+
+Variables are injected into the LESS template at the bottom with the following declaration format:
+<br />
+	<span class="less_variable">@color1:#F0F0F0;</span>
+	<br />
+	<span class="less_variable">@color2:#FFFFFF;</span>
+	<br />
+	<span class="less_variable">@color3:red;</span>
+	<br />
+	<span class="less_variable">@url1:'http://www.google.com/';</span>
+	<br />
+	<span class="less_variable">@url2:'http://www.google.com/';</span>
+	<br />
+	<span class="less_variable">@misc1:'Any other text value';</span>
+	<br />
+	<span class="less_variable">@misc2:'Any other text value';</span>
+	<br />
 
 </div>
 </body>

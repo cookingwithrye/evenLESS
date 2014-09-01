@@ -5,12 +5,17 @@ html { font-size: 100%; }
 body {
   font-family: 'Open Sans', sans-serif;
   background: #A6F0F0;
+  padding:5em;
 }
 
 .container {
   width: 45em;
   margin: 0 auto;
   text-align:center;
+}
+
+.less_variable {
+	font-family:consolas;
 }
 
 h1 {
