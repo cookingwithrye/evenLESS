@@ -7,7 +7,7 @@ $(function() {
 		success : function (lessFile) {
 			rawLess = lessFile;
 		}
-	});
+	}); 
 });
 
 $(function() {
