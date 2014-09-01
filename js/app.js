@@ -59,5 +59,9 @@ $(function() {
 
 	$('#generate').click(function() {
 	  CssCompile.init();
+	  setTimeout(function() {
+		//select all text after compilation is complete
+		$('textarea#output').select();
+	  }, 100);
 	});
 });
