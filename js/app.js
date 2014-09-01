@@ -18,7 +18,6 @@ $(function() {
 		async: false,
 		success : function (lessFile) {
 			rawLess = lessFile;
-			rawLess = rawLess + '\n\n/*Generated variables:*/';
 		}
 	}); 
 });

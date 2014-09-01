@@ -3,11 +3,13 @@
 @color2: #000000;
 @color3: #f0f0f0;
 
-@url1: 'http://www.google.ca';
-@url2: %("%s/images/logo.png", @url1); 
+@url1: 'http://www.google.ca/'; /* base site url */
 
 @misc1: 'Add custom text into css';
 @misc2: 'nada';
+
+/* calculate full url to logo */
+@customUrl: %("%sImages/logo.png", @url1);
 
 // Styles
 body {
@@ -16,7 +18,7 @@ body {
 
 textarea {
   color:@color2;
-  background-image: url('@{url2}');
+  background-image: url('@{customUrl}');
 }
 
 #header:after {
