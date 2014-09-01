@@ -9,15 +9,41 @@
 </head>
 <body>
 <div class="container">
-  <h1>In Browser LESS -> CSS</h1>
+  <h1>In Browser LESS to CSS with custom variables</h1>
   <div class="header">
     <div>
-    <label for="color1">Color 1 (in LESS file as '@color1')</label>&nbsp;
+    <p>
+		Leave any fields blank that you don't want substituted in and the variables will not be declared.
+	</p>
+	<label for="color1">Color 1</label>&nbsp;
     <input id="color1" type="text" placeholder="#F0F0F0"></input>
+	<span class="less_variable">@color1</span>
     <br />
-    <label for="color2">Color 2 (in LESS file as '@color2')</label>&nbsp;
+    <label for="color2">Color 2</label>&nbsp;
     <input id="color2" type="text" placeholder="#FFFFFF"></input>
+	<span class="less_variable">@color2</span>
     <br />
+    <label for="color3">Color 3</label>&nbsp;
+    <input id="color3" type="text" placeholder="red"></input>
+	<span class="less_variable">@color3</span>
+    <br />
+    <label for="url1">Url 1</label>&nbsp;
+    <input id="url1" type="text" placeholder="http://www.test.com/"></input>
+	<span class="less_variable">@url1</span>
+    <br />
+    <label for="url2">Url 2</label>&nbsp;
+    <input id="url2" type="text" placeholder="http://www.anothertest.com/"></input>
+	<span class="less_variable">@url2</span>
+    <br />
+    <label for="misc1">Misc. 1</label>&nbsp;
+    <input id="misc1" type="text" placeholder="Anything other variable"></input>
+	<span class="less_variable">@misc1</span>
+    <br />
+    <label for="misc2">Misc. 2</label>&nbsp;
+    <input id="misc2" type="text" placeholder="Anything other variable"></input>
+	<span class="less_variable">@misc2</span>
+    <br />
+	<label><input id="shouldMinify" type="checkbox" checked />Minify CSS?</label>
     <input id="generate" type="button" value="Generate"></input>
   </div>
 </div>
