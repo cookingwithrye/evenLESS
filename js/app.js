@@ -19,7 +19,9 @@ $(function() {
 		success : function (lessFile) {
 			rawLess = lessFile;
 		}
-	}); 
+	});
+	
+	$('.extra').hide();
 });
 
 $(function() {

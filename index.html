@@ -13,30 +13,42 @@
   <div class="header">
     <div>
     <h4>Leave any fields blank, and the variables will not be subsituted in.</h4>
+	
+	<div>
+		<label><input id="color1" type="text" placeholder="#F0F0F0" />Color 1</label>
+	</div>
+	
+	<div>
+		<label><input id="color2" type="text" placeholder="#FFFFFF"></input>Color 2</label>
+	</div>
+
+	<div class="extra">
+		<label><input id="color3" type="text" placeholder="red"></input>Color 3</label>
+	</div>
+		
+	<div>
+		<label><input id="url1" type="text" placeholder="http://www.google.com/"></input>Url 1</label>
+	</div>
+    
+	<div class="extra">
+		<label><input id="url2" type="text" placeholder="http://www.google.com/"></input>Url 2</label>
+	</div>
+
+	<div class="extra">
+		<label for="misc1">Misc. 1</label>&nbsp;
+		<label><input id="misc1" type="text" placeholder="Any other text value"></input>Misc: 1</label>
+	</div>
+		
+    <div class="extra">
+		<label><input id="misc2" type="text" placeholder="Any other text value"></input>Misc: 2</label>
+	</div>
+
+	<input type="button" onclick="$('.extra').show();">More variables</input>
 	<br />
-	<label for="color1">Color 1</label>&nbsp;
-    <input id="color1" type="text" placeholder="#F0F0F0"></input>
-	<br />
-    <label for="color2">Color 2</label>&nbsp;
-    <input id="color2" type="text" placeholder="#FFFFFF"></input>
-    <br />
-    <label for="color3">Color 3</label>&nbsp;
-    <input id="color3" type="text" placeholder="red"></input>
-    <br />
-    <label for="url1">Url 1</label>&nbsp;
-    <input id="url1" type="text" placeholder="http://www.google.com/"></input>
-    <br />
-    <label for="url2">Url 2</label>&nbsp;
-    <input id="url2" type="text" placeholder="http://www.google.com/"></input>
-    <br />
-    <label for="misc1">Misc. 1</label>&nbsp;
-    <input id="misc1" type="text" placeholder="Any other text value"></input>
-    <br />
-    <label for="misc2">Misc. 2</label>&nbsp;
-    <input id="misc2" type="text" placeholder="Any other text value"></input>
-	<br />
+	
 	<label><input id="shouldMinify" type="checkbox" checked />Minify CSS?</label>
-    <input id="generate" type="button" value="Generate"></input>
+    
+	<input id="generate" type="button" value="Generate"></input>
   </div>
 </div>
 <br />
